@@ -25,7 +25,7 @@
     }
 
     >nav>ul {
-      margin: 10px 0;
+      post-toc-margin-left: 10px 0;
     }
 
     ul {
@@ -41,9 +41,16 @@
         display: block;
       }
     }
+    
+    .toc-link {
+      padding: 0 5px;
+    }
 
     .toc-link.active {
       color: $theme-color;
+      border-left: .125rem solid $theme-color;
+      box-shadow: none;
+      font-weight: 700;
     }
   }
 }
