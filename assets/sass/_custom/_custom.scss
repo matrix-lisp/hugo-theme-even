@@ -2,3 +2,29 @@
 // Custom style
 // ==============================
 // You can override the variables in _variables.scss to customize the style
+
+$post-toc-list-style: none;
+$theme-color: #c05b4d;
+
+.toc-link {
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.1rem;
+    padding: 0 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 0;
+}
+
+.toc-link.hover {
+    color: $theme-color;
+     border-left: .025rem solid $theme-color;
+     box-shadow: none;
+}
+
+.toc-link.active {
+    color: $theme-color;
+     border-left: .125rem solid $theme-color;
+     box-shadow: none;
+     font-weight: 700;
+}

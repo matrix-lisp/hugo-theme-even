@@ -41,17 +41,6 @@
         display: block;
       }
     }
-    
-    .toc-link {
-      padding: 0 5px;
-    }
-
-    .toc-link.active {
-      color: $theme-color;
-      border-left: .125rem solid $theme-color;
-      box-shadow: none;
-      font-weight: 700;
-    }
   }
 }
 
