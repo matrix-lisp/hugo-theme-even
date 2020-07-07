@@ -188,6 +188,7 @@ Even.toc = function() {
       this._refactorToc(toc);
       this._linkToc();
       this._initToc();
+      this._orderedToc();
     }
   }
 };
@@ -277,3 +278,30 @@ Even.responsiveTable = function() {
   }
 };
 
+Even._orderedToc = function() {
+    var contents = document.getElementById("TableOfContents");
+    var uls = contents.children;
+    for (let i = 0; i < uls.length; i++) {
+        this._orderedTocLoop(uls[i], "");
+    }
+};
+
+Even._orderedTocLoop = function(ul, prefix) {
+    var lis = ul.children;
+    for (let i = 0; i < lis.length; i++) {
+        var order = i + 1;
+        if (prefix != "") {
+            order = prefix + "." + (i + 1);
+        }
+        var nodes = lis[i].children;
+        for (let j = 0; j < nodes.length; j++) {
+            var node = nodes[j];
+            var tag = node.tagName;
+            if (tag == "A") {
+                node.innerHTML = order + " - " + node.innerHTML;
+            } else if (tag == "UL") {
+                this._orderedTocLoop(node, order);
+            }
+        }
+    }
+};

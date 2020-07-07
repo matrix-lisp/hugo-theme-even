@@ -7,24 +7,54 @@ $post-toc-list-style: none;
 $theme-color: #c05b4d;
 
 .toc-link {
-    font-size: .8rem;
+    font-size: .9rem;
     font-weight: 400;
     line-height: 1.1rem;
     padding: 0 5px;
     margin-top: 2px;
     margin-bottom: 2px;
     border-radius: 0;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .toc-link.hover {
     color: $theme-color;
-     border-left: .025rem solid $theme-color;
-     box-shadow: none;
+    border-left: .025rem solid $theme-color;
+    box-shadow: none;
 }
 
 .toc-link.active {
     color: $theme-color;
-     border-left: .125rem solid $theme-color;
-     box-shadow: none;
-     font-weight: 700;
+    border-left: .125rem solid $theme-color;
+    box-shadow: none;
+    font-weight: 700;
 }
+
+/* 设置菜单项hover样式 */
+.header .site-navbar .menu .menu-item {
+	transition: transform 1s;
+	-webkit-transition: transform 1s;
+}
+.header .site-navbar .menu .menu-item:hover {
+    background-color: #CCCCCC;
+	border-radius: 6px;
+	transform: scale(1.2, 1.2);
+	-webkit-transform: scale(1.2, 1.2);
+}
+
+/* 设置文章标题hover样式 */
+.post .post-header .post-link {
+     transition: transform 1s;
+     -webkit-transition: transform 1s;
+}
+.post .post-header .post-link:hover {
+    background-color: #CCCCCC;
+	border-radius: 6px;
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+}
+
